@@ -10,12 +10,6 @@ variable "profile" {
   default     = "dev_profile"
 }
 
-variable "app_tag" {
-  description = "Default tag to be applied to resources"
-  type        = string
-  default     = "lambda-stack"
-}
-
 variable "app_name" {
   description = "Name of the application"
   type        = string
