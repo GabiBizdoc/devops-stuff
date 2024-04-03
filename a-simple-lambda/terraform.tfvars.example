@@ -1,0 +1,12 @@
+# region: Specifies the AWS region where resources will be deployed
+region = "us-west-2"
+# profile: Refers to the AWS CLI profile used for authentication
+profile = "my_aws_profile"
+# app_name: Represents the name of the API
+app_name = "my_api"
+# stage_name: Indicates the stage name (e.g., dev, prod, test, stage...)
+stage_name = "dev"
+# domain_name: Specifies the domain name for the API Gateway
+domain_name = "example.com"
+# zone_id: Refers to the Route 53 hosted zone ID for DNS configuration
+zone_id = "ABC123DEF456"

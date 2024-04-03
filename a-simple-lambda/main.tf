@@ -12,7 +12,7 @@ terraform {
     }
   }
 
-# We don't need it right now.
+# We don't need this right now.
 #  backend "s3" {
 #    bucket         = "my-terraform-state-bucket"
 #    key            = "${var.app_name}/terraform.tfstate"
