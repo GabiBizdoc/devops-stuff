@@ -2,7 +2,6 @@
 resource "aws_apigatewayv2_api" "api" {
   name          = var.app_name
   protocol_type = "HTTP"
-
 }
 
 # Define a CloudWatch Logs group to store logs related to the API Gateway

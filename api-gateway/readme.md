@@ -36,7 +36,7 @@ Before you begin, ensure you have the following prerequisites installed:
 1. Clone the Repository
     ```bash
     git clone git@github.com:GabiBizdoc/terraform-with-me.git
-    cd terraform-with-me/a-simple-lambda
+    cd terraform-with-me/api-gateway
     ```
 
 2. Build the Lambda Function
@@ -57,6 +57,8 @@ Before you begin, ensure you have the following prerequisites installed:
    custom_domain_name = "example.com"
    # route53_zone_id: Refers to the Route 53 hosted zone ID for DNS configuration
    route53_zone_id = "ABC123DEF456"
+   # app_domain_name_ttl: Specifies the time-to-live (TTL) value for `custom_domain_name`
+   app_domain_name_ttl = 60
    ```
 4. Initialize Terraform by running the following command:
    ```sh

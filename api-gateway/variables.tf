@@ -21,6 +21,12 @@ variable "app_domain_name" {
   type        = string
 }
 
+variable "app_domain_name_ttl" {
+  description = "Custom domain name for the application"
+  type        = number
+  default     = 60
+}
+
 variable "route53_zone_id" {
   description = "ID of the Route 53 hosted zone"
   type        = string

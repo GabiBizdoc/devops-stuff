@@ -34,7 +34,7 @@ resource "aws_route53_record" "dns_validation" {
   allow_overwrite = true
   name            = each.value.name
   records         = [each.value.record]
-  ttl             = 60 # TODO: use a variable or ttl
+  ttl             = var.app_domain_name_ttl
   type            = each.value.type
   zone_id         = var.route53_zone_id
 }
