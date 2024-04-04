@@ -1,10 +1,10 @@
-variable "region" {
+variable "aws_region" {
   description = "AWS region where resources will be deployed"
   type        = string
   default     = "eu-central-1"
 }
 
-variable "profile" {
+variable "aws_profile" {
   description = "AWS profile to use for deployment"
   type        = string
   default     = "dev_profile"
@@ -16,18 +16,18 @@ variable "app_name" {
   default     = "a-simple-lambda"
 }
 
-variable "domain_name" {
-  description = "Domain of the application"
+variable "app_domain_name" {
+  description = "Custom domain name for the application"
   type        = string
 }
 
-variable "zone_id" {
-  description = "Value of zone id"
+variable "route53_zone_id" {
+  description = "ID of the Route 53 hosted zone"
   type        = string
 }
 
-variable "stage_name" {
-  description = "Value of stage_name"
+variable "api_stage_name" {
+  description = "Name of the API Gateway stage"
   type        = string
   default     = "test"
 }

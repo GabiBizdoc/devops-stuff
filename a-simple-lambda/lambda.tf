@@ -1,4 +1,3 @@
-# Inline policy for the Lambda function that allows it to create log groups, streams, and put log events
 resource "aws_lambda_function" "hello_world_lambda" {
   filename      = "${path.module}/dist/app.zip"
   function_name = "hello-world-lambda"
@@ -12,7 +11,7 @@ resource "aws_lambda_function" "hello_world_lambda" {
     mode = "Active"
   }
 
-  # Environment variables for the Lambda function (currently empty)
+  # Environment variables for the Lambda function
   environment {
     variables = {}
   }

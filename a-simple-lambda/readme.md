@@ -36,7 +36,7 @@ Before you begin, ensure you have the following prerequisites installed:
 1. Clone the Repository
     ```bash
     git clone git@github.com:GabiBizdoc/terraform-with-me.git
-    cd a-simple-lambda
+    cd terraform-with-me/a-simple-lambda
     ```
 
 2. Build the Lambda Function
@@ -45,37 +45,42 @@ Before you begin, ensure you have the following prerequisites installed:
     ```
 3. Configure your environment by creating a file named `terraform.tfvars` based on this example.
    ```tf
-   # region: Specifies the AWS region where resources will be deployed
-   region = "us-west-2"
-   # profile: Refers to the AWS CLI profile used for authentication
-   profile = "my_aws_profile"
-   # app_name: Represents the name of the API
-   app_name = "my_api"
-   # stage_name: Indicates the stage name (e.g., dev, prod, test, stage...)
-   stage_name = "dev"
-   # domain_name: Specifies the domain name for the API Gateway
-   domain_name = "example.com"
-   # zone_id: Refers to the Route 53 hosted zone ID for DNS configuration
-   zone_id = "ABC123DEF456"
+   # aws_region: Specifies the AWS region where resources will be deployed
+   aws_region = "eu-central-1"
+   # aws_profile: Refers to the AWS CLI profile used for authentication
+   aws_profile = "my_aws_profile"
+   # application_name: Represents the name of the API
+   application_name = "my_api_name"
+   # api_stage_name: Indicates the stage name (e.g., dev, prod, test, stage...)
+   api_stage_name = "dev"
+   # custom_domain_name: Specifies the domain name for the API Gateway
+   custom_domain_name = "example.com"
+   # route53_zone_id: Refers to the Route 53 hosted zone ID for DNS configuration
+   route53_zone_id = "ABC123DEF456"
    ```
 4. Initialize Terraform by running the following command:
-    ```sh
-        terraform init
-    ```
+   ```sh
+   terraform init
+   ```
 
 5. Review the execution plan by running (optional):
    ```sh
-       terraform plan -out=terraform.plan
+   terraform plan -out=terraform.plan
    ```
 
 6. Apply the Terraform configuration to create the AWS resources:
-    ```sh
-        terraform apply
-        # or
-        terraform apply terraform.plan
-    ```
+   ```sh
+   terraform apply
+   # or
+   terraform apply terraform.plan
+   ```
 
 7. Cleanup
-    ```sh
-        terraform destroy
-    ```
+   ```sh
+   terraform destroy
+   ```
+
+### Learning Resources 
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources
+- https://antonputra.com/amazon/how-to-create-aws-lambda-with-terraform/
+- https://antonputra.com/amazon/aws-api-gateway-custom-domain/

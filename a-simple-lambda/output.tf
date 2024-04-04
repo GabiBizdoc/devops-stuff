@@ -4,5 +4,5 @@ output "lambda_url" {
 
 output "domain_name_id" {
   description = "The domain name ID."
-  value = "https://${var.domain_name}/${var.stage_name}"
+  value = "https://${var.app_domain_name}/${var.api_stage_name}"
 }
